@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp6cwvhwe8jag"]
+
+[ext_resource type="Script" path="res://scenes/list_item/list_item.gd" id="1_hy3ex"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cydyg"]
+
+[node name="ListItem" type="Control"]
+clip_contents = true
+custom_minimum_size = Vector2(350, 175)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 350.0
+offset_bottom = 200.0
+script = ExtResource("1_hy3ex")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_cydyg")
+text = "Item"
+horizontal_alignment = 1
+vertical_alignment = 1
