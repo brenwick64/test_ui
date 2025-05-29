@@ -5,12 +5,12 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cydyg"]
 
 [node name="ListItem" type="Control"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 175)
 layout_mode = 3
-anchors_preset = 0
-offset_right = 350.0
-offset_bottom = 200.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_hy3ex")
 
 [node name="Label" type="Label" parent="."]

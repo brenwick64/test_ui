@@ -45,7 +45,6 @@ layout_mode = 2
 
 [node name="ListItem" parent="List1/Panel/VBoxContainer2/List/ListItemSlot" instance=ExtResource("2_fo86f")]
 layout_mode = 2
-anchors_preset = 0
 offset_bottom = 175.0
 item_name = "Item 1"
 
@@ -55,7 +54,6 @@ layout_mode = 2
 
 [node name="ListItem" parent="List1/Panel/VBoxContainer2/List/ListItemSlot2" instance=ExtResource("2_fo86f")]
 layout_mode = 2
-anchors_preset = 0
 offset_bottom = 175.0
 item_name = "Item 1"
 
