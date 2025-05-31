@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3 uid="uid://du5qolwdr3rnf"]
+
+[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/list.gd" id="3_7irb6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpxco"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+
+[node name="DragAndDropTestScene" type="Node2D"]
+
+[node name="List1" type="Control" parent="."]
+custom_minimum_size = Vector2(350, 600)
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 0
+
+[node name="Panel" type="Panel" parent="List1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="List1/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="List1/Panel/VBoxContainer2"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_dpxco")
+text = "Drag List"
+horizontal_alignment = 1
+
+[node name="List" type="VBoxContainer" parent="List1/Panel/VBoxContainer2"]
+layout_mode = 2
+script = ExtResource("3_7irb6")
+list_items = Array[String](["Item 1", "Item 2", "Item 3"])
+
+[node name="ItemSlot" type="Panel" parent="List1/Panel/VBoxContainer2/List"]
+custom_minimum_size = Vector2(350, 175)
+layout_mode = 2
+
+[node name="ItemSlot2" type="Panel" parent="List1/Panel/VBoxContainer2/List"]
+custom_minimum_size = Vector2(350, 175)
+layout_mode = 2
+
+[node name="ItemSlot3" type="Panel" parent="List1/Panel/VBoxContainer2/List"]
+custom_minimum_size = Vector2(350, 175)
+layout_mode = 2
+
+[node name="List2" type="Control" parent="."]
+custom_minimum_size = Vector2(350, 600)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 412.0
+offset_right = 762.0
+offset_bottom = 600.0
+size_flags_horizontal = 0
+
+[node name="Panel" type="Panel" parent="List2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="List2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="List2/Panel/VBoxContainer2"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_dpxco")
+text = "Drop List"
+horizontal_alignment = 1
+
+[node name="List" type="VBoxContainer" parent="List2/Panel/VBoxContainer2"]
+layout_mode = 2
+script = ExtResource("3_7irb6")
+
+[node name="ListItemSlot" type="Panel" parent="List2/Panel/VBoxContainer2/List"]
+custom_minimum_size = Vector2(350, 175)
+layout_mode = 2
+
+[node name="ListItemSlot2" type="Panel" parent="List2/Panel/VBoxContainer2/List"]
+custom_minimum_size = Vector2(350, 175)
+layout_mode = 2
+
+[node name="ListItemSlot3" type="Panel" parent="List2/Panel/VBoxContainer2/List"]
+custom_minimum_size = Vector2(350, 175)
+layout_mode = 2

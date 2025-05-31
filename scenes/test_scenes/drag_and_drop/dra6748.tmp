@@ -14,12 +14,12 @@ offset_bottom = 40.0
 script = ExtResource("1_8m2uk")
 
 [node name="List" type="VBoxContainer" parent="DragAndDropContext" node_paths=PackedStringArray("drag_and_drop_context")]
-layout_mode = 0
 offset_top = 27.0
 offset_right = 350.0
 offset_bottom = 560.0
 script = ExtResource("3_7irb6")
 drag_and_drop_context = NodePath("..")
+MAX_LIST_ITEMS = null
 list_items = Array[String](["Item 1", "Item 2", "Item 3"])
 
 [node name="ItemSlot" type="Panel" parent="DragAndDropContext/List"]
@@ -38,13 +38,14 @@ layout_mode = 2
 script = ExtResource("2_eq8e0")
 
 [node name="List2" type="VBoxContainer" parent="DragAndDropContext" node_paths=PackedStringArray("drag_and_drop_context")]
-layout_mode = 0
 offset_left = 412.0
 offset_top = 27.0
 offset_right = 762.0
 offset_bottom = 560.0
 script = ExtResource("3_7irb6")
 drag_and_drop_context = NodePath("..")
+MAX_LIST_ITEMS = null
+list_items = null
 
 [node name="ItemSlot" type="Panel" parent="DragAndDropContext/List2"]
 custom_minimum_size = Vector2(350, 175)
