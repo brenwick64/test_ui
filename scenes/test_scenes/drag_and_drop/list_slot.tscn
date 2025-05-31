@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqfmhwvlj44rj"]
+
+[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/droppable.gd" id="1_rtxru"]
+
+[node name="ListSlot" type="PanelContainer"]
+custom_minimum_size = Vector2(350, 175)
+script = ExtResource("1_rtxru")
