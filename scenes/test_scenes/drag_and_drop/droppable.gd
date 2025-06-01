@@ -1,9 +1,15 @@
 class_name Droppable
 extends Control
 
+# TODO: separate droppable into other component
+@export var min_size_y: int
+
 signal hovered(droppable: Droppable)
 signal unhovered(droppable: Droppable)
 signal drop(droppable: Droppable, draggable: Draggable)
+
+func _ready() -> void:
+	custom_minimum_size.y = min_size_y
 
 # signal handlers
 func handle_hover() -> void:

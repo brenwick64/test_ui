@@ -8,6 +8,7 @@ bg_color = Color(0.251318, 0.634925, 0.887655, 1)
 [node name="ListItem" type="Panel"]
 theme_override_styles/panel = SubResource("StyleBoxFlat_40wee")
 script = ExtResource("1_crcua")
+list_item_name = "List Item"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -22,4 +23,5 @@ offset_right = 40.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "List Item 1"
+horizontal_alignment = 1
+vertical_alignment = 1

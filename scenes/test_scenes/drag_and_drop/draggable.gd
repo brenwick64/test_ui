@@ -1,13 +1,23 @@
 class_name Draggable
 extends Panel
 
+signal draggable_dropped(draggable: Draggable)
+
+@onready var label: Label = $Label
+
+@export var list_item_name: String
+
 var current_droppable: Droppable
 var is_node_hoisted: bool = false
 var is_dragging: bool = false
 var drag_offset: Vector2
 
+func _ready() -> void:
+	label.text = list_item_name
+
 # helpers
 func _handle_drop() -> void:
+	draggable_dropped.emit(self)
 	if current_droppable:
 		current_droppable.handle_unhover()
 		current_droppable.handle_drop(self)
