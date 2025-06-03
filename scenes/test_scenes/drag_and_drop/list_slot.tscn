@@ -1,6 +1,40 @@
 [gd_scene load_steps=2 format=3 uid="uid://bqfmhwvlj44rj"]
 
-[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/droppable.gd" id="1_rtxru"]
+[sub_resource type="GDScript" id="GDScript_yn0gw"]
+script/source = "class_name Droppable
+extends Control
+
+# TODO: separate droppable into other component
+@export var min_size_y: int
+
+signal hovered(droppable: Droppable)
+signal unhovered(droppable: Droppable)
+signal drop(droppable: Droppable, draggable: Draggable)
+
+func _ready() -> void:
+	custom_minimum_size.y = min_size_y
+
+# signal handlers
+func handle_hover() -> void:
+	hovered.emit(self)
+
+func handle_unhover() -> void:
+	unhovered.emit(self)
+
+func handle_drop(draggable: Draggable) -> void:
+	drop.emit(self, draggable)
+
+# methods
+func focus() -> void:
+	var original_stylebox: StyleBoxFlat = get_theme_stylebox(\"panel\")
+	var stylebox = original_stylebox.duplicate() as StyleBoxFlat
+	stylebox.set_border_width_all(2)
+	stylebox.border_color = Color(\"blue\")
+	add_theme_stylebox_override(\"panel\", stylebox)
+
+func unfocus() -> void:
+	remove_theme_stylebox_override(\"panel\")
+"
 
 [node name="ListSlot" type="PanelContainer"]
-script = ExtResource("1_rtxru")
+script = SubResource("GDScript_yn0gw")

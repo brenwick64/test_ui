@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://64d5xexgxju1"]
+
+[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/test/auto_sort_slot/auto_sort_slot.gd" id="1_rpukp"]
+[ext_resource type="PackedScene" uid="uid://cn1phjs44wxk3" path="res://scenes/test_scenes/drag_and_drop/test/droppable/droppable.tscn" id="2_06387"]
+
+[node name="AutoSortSlot" type="PanelContainer" node_paths=PackedStringArray("droppable")]
+custom_minimum_size = Vector2(350, 150)
+script = ExtResource("1_rpukp")
+droppable = NodePath("Droppable")
+
+[node name="Droppable" parent="." instance=ExtResource("2_06387")]

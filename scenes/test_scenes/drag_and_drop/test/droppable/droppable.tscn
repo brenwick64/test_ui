@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn1phjs44wxk3"]
+
+[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/test/droppable/droppable.gd" id="1_qs4m1"]
+
+[node name="Droppable" type="Node"]
+script = ExtResource("1_qs4m1")

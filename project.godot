@@ -11,12 +11,8 @@ config_version=5
 [application]
 
 config/name="test_ui"
-run/main_scene="res://scenes/test_scenes/drag_and_drop/drag_and_drop_test_scene.tscn"
+run/main_scene="res://scenes/test_scenes/drag_and_drop/new_drag_and_drop.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-
-[autoload]
-
-DragAndDropManager="*res://scripts/globals/drag_and_drop_manager.gd"
 
 [file_customization]
 

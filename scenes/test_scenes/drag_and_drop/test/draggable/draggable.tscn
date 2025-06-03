@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://blh61klxjjp41"]
+
+[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/test/draggable/draggable.gd" id="1_ch3pq"]
+
+[node name="Draggable" type="Node" node_paths=PackedStringArray("parent_ui")]
+script = ExtResource("1_ch3pq")
+parent_ui = NodePath("")

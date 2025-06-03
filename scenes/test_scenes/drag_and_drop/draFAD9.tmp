@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=3 uid="uid://cn5km2l0efy41"]
+
+[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/test/draggable_item.gd" id="1_ng17g"]
+[ext_resource type="PackedScene" uid="uid://blh61klxjjp41" path="res://scenes/test_scenes/drag_and_drop/test/draggable/draggable.tscn" id="2_ac30y"]
+[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/test/droppable/droppable.gd" id="3_io8lo"]
+[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/test/droppable_slot.gd" id="3_vuujl"]
+[ext_resource type="PackedScene" uid="uid://cn1phjs44wxk3" path="res://scenes/test_scenes/drag_and_drop/test/droppable/droppable.tscn" id="4_lv7aw"]
+[ext_resource type="PackedScene" uid="uid://bc8b1oqn55se0" path="res://scenes/test_scenes/drag_and_drop/test/auto_sort_list/auto_sort_list.tscn" id="6_oufod"]
+[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/test/auto_sort_list/auto_sort_list.gd" id="7_2ks74"]
+[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/test/auto_sort_slot/auto_sort_slot.gd" id="8_o3gec"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4d3do"]
+
+[node name="DragAndDrop" type="Node2D" groups=["MainScene"]]
+
+[node name="DraggableItem" type="Panel" parent="."]
+custom_minimum_size = Vector2(150, 50)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4d3do")
+script = ExtResource("1_ng17g")
+
+[node name="Draggable" parent="DraggableItem" instance=ExtResource("2_ac30y")]
+
+[node name="DragAndDropList" type="VBoxContainer" parent="."]
+offset_left = 239.0
+offset_right = 389.0
+offset_bottom = 50.0
+
+[node name="DroppableSlot" type="PanelContainer" parent="DragAndDropList"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+script = ExtResource("3_vuujl")
+
+[node name="Droppable" parent="DragAndDropList/DroppableSlot" instance=ExtResource("4_lv7aw")]
+
+[node name="DroppableSlot2" type="PanelContainer" parent="DragAndDropList"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+script = ExtResource("3_vuujl")
+
+[node name="Droppable" type="Node" parent="DragAndDropList/DroppableSlot2"]
+script = ExtResource("3_io8lo")
+
+[node name="AutoSortList" parent="." instance=ExtResource("6_oufod")]
+script = ExtResource("7_2ks74")
+
+[node name="AutoSortSlot" type="PanelContainer" parent="AutoSortList"]
+layout_mode = 2
+script = ExtResource("8_o3gec")
+
+[node name="Droppable" parent="AutoSortList/AutoSortSlot" instance=ExtResource("4_lv7aw")]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpkg4xnteaneq"]
 
-[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/draggable.gd" id="1_crcua"]
+[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/draggable/draggable.gd" id="1_crcua"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40wee"]
 bg_color = Color(0.251318, 0.634925, 0.887655, 1)

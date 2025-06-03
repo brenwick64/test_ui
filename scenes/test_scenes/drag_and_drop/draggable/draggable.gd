@@ -17,6 +17,7 @@ func _ready() -> void:
 
 # helpers
 func _handle_drop() -> void:
+	set_z_index(1)
 	draggable_dropped.emit(self)
 	if current_droppable:
 		current_droppable.handle_unhover()

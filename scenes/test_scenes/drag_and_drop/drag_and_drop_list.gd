@@ -17,7 +17,6 @@ func _ready() -> void:
 
 # helper functions
 func _shift_open_slots() -> void:
-	var prev_empty_slot: Droppable
 	for list_slot: Droppable in get_children():
 		# move empty slots to last position
 		if list_slot.get_child_count() == 0:
