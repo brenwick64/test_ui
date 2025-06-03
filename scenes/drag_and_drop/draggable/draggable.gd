@@ -1,3 +1,4 @@
+class_name Draggable
 extends Node
 
 @export var parent_ui: Control

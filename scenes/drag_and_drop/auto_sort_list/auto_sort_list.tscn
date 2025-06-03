@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bc8b1oqn55se0"]
 
-[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/test/auto_sort_list/auto_sort_list.gd" id="1_jtear"]
+[ext_resource type="Script" path="res://scenes/drag_and_drop/auto_sort_list/auto_sort_list.gd" id="1_jtear"]
 
 [node name="AutoSortList" type="VBoxContainer"]
 offset_right = 40.0

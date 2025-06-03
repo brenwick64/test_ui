@@ -1,6 +1,6 @@
 extends PanelContainer
 
-@export var droppable: Node
+@export var droppable: Droppable
 
 signal draggable_entered(droppable, draggable)
 signal draggable_exited(droppable, draggable)

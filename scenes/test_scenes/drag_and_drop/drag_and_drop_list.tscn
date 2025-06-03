@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://n7hmac0xbcrg"]
-
-[ext_resource type="Script" path="res://scenes/test_scenes/drag_and_drop/drag_and_drop_list.gd" id="1_0nfk1"]
-
-[node name="DragAndDropList" type="VBoxContainer"]
-offset_right = 584.0
-offset_bottom = 262.0
-script = ExtResource("1_0nfk1")
-LIST_SLOT_HEIGHT = 100

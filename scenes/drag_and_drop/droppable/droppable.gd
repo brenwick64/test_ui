@@ -1,4 +1,4 @@
-class_name Droppable2
+class_name Droppable
 extends Node
 
 signal draggable_entered(draggable)
