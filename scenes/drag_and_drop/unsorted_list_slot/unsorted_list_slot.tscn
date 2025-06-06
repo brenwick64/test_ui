@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://qxriqmyd5iwq"]
+
+[ext_resource type="Script" path="res://scenes/drag_and_drop/unsorted_list_slot/unsorted_list_slot.gd" id="1_h2p74"]
+[ext_resource type="PackedScene" uid="uid://cn1phjs44wxk3" path="res://scenes/drag_and_drop/droppable/droppable.tscn" id="2_n2ucp"]
+
+[node name="UnsortedListSlot" type="PanelContainer" node_paths=PackedStringArray("droppable")]
+custom_minimum_size = Vector2(350, 150)
+script = ExtResource("1_h2p74")
+droppable = NodePath("Droppable")
+
+[node name="Droppable" parent="." instance=ExtResource("2_n2ucp")]

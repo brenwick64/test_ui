@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckr72p3oeosta"]
+
+[ext_resource type="PackedScene" uid="uid://t3qih7b064a8" path="res://scenes/quest_selector/resource_buttons/resource_buttons.tscn" id="1_0jcs8"]
+[ext_resource type="Script" path="res://scenes/quest_selector/quest_selector.gd" id="1_7t42c"]
+[ext_resource type="PackedScene" uid="uid://deugveuuvmapd" path="res://scenes/quest_selector/amount_buttons/amount_buttons.tscn" id="4_nisye"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6747h"]
+bg_color = Color(0.847059, 0.8, 0.678431, 1)
+
+[node name="QuestSelector" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7t42c")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(350, 150)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6747h")
+
+[node name="QuestText" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 10.0
+offset_right = 288.0
+offset_bottom = 50.0
+
+[node name="Action" type="Label" parent="Panel/QuestText"]
+layout_mode = 2
+text = "[Action]"
+
+[node name="Amount" type="Label" parent="Panel/QuestText"]
+layout_mode = 2
+text = "[Amount]"
+
+[node name="Resource" type="Label" parent="Panel/QuestText"]
+layout_mode = 2
+text = "[Resource]"
+
+[node name="ResourceButtons" parent="Panel" instance=ExtResource("1_0jcs8")]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 77.0
+offset_right = 120.0
+offset_bottom = 143.0
+
+[node name="AmountButtons" parent="Panel" instance=ExtResource("4_nisye")]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 77.0
+offset_right = 330.0
+offset_bottom = 143.0
+
+[connection signal="resource_changed" from="Panel/ResourceButtons" to="." method="_on_resource_buttons_resource_changed"]
+[connection signal="amount_changed" from="Panel/AmountButtons" to="." method="_on_amount_buttons_amount_changed"]

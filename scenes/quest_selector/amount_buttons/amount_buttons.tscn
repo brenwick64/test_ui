@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://deugveuuvmapd"]
+
+[ext_resource type="Script" path="res://scenes/quest_selector/amount_buttons/amount_buttons.gd" id="1_hp32f"]
+
+[node name="AmountButtons" type="HBoxContainer"]
+offset_left = 245.0
+offset_top = 83.0
+offset_right = 345.0
+offset_bottom = 149.0
+alignment = 1
+script = ExtResource("1_hp32f")
+
+[node name="Decrement" type="Button" parent="."]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "-"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "0"
+
+[node name="Increment" type="Button" parent="."]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "+"
+
+[connection signal="pressed" from="Decrement" to="." method="_on_decrement_pressed"]
+[connection signal="pressed" from="Increment" to="." method="_on_increment_pressed"]

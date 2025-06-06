@@ -1,0 +1,112 @@
+[gd_scene load_steps=3 format=3 uid="uid://dssa44rsbyefj"]
+
+[ext_resource type="PackedScene" uid="uid://cyysoa1ytxc1t" path="res://scenes/drag_and_drop/draggable_item/draggable_item.tscn" id="1_jpwek"]
+[ext_resource type="PackedScene" uid="uid://qxriqmyd5iwq" path="res://scenes/drag_and_drop/unsorted_list_slot/unsorted_list_slot.tscn" id="2_03071"]
+
+[node name="UnsortedListTestScene" type="Node2D" groups=["MainScene"]]
+
+[node name="DraggableItems" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DraggableItem" parent="DraggableItems" instance=ExtResource("1_jpwek")]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 25.0
+offset_right = 358.0
+offset_bottom = 75.0
+item_name = "Item 1"
+
+[node name="DraggableItem2" parent="DraggableItems" instance=ExtResource("1_jpwek")]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 25.0
+offset_right = 518.0
+offset_bottom = 75.0
+item_name = "Item 2"
+
+[node name="DraggableItem3" parent="DraggableItems" instance=ExtResource("1_jpwek")]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 25.0
+offset_right = 675.0
+offset_bottom = 75.0
+item_name = "Item 3"
+
+[node name="DraggableItem4" parent="DraggableItems" instance=ExtResource("1_jpwek")]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 25.0
+offset_right = 834.0
+offset_bottom = 75.0
+item_name = "Item 4"
+
+[node name="DraggableItem5" parent="DraggableItems" instance=ExtResource("1_jpwek")]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 89.0
+offset_right = 357.0
+offset_bottom = 139.0
+item_name = "Item 5"
+
+[node name="DraggableItem6" parent="DraggableItems" instance=ExtResource("1_jpwek")]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 89.0
+offset_right = 516.0
+offset_bottom = 139.0
+item_name = "Item 6"
+
+[node name="DraggableItem7" parent="DraggableItems" instance=ExtResource("1_jpwek")]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 89.0
+offset_right = 673.0
+offset_bottom = 139.0
+item_name = "Item 7"
+
+[node name="DraggableItem8" parent="DraggableItems" instance=ExtResource("1_jpwek")]
+layout_mode = 0
+offset_left = 683.0
+offset_top = 89.0
+offset_right = 833.0
+offset_bottom = 139.0
+item_name = "Item 8"
+
+[node name="UnsortedList" type="VBoxContainer" parent="."]
+offset_left = 154.0
+offset_top = 178.0
+offset_right = 504.0
+offset_bottom = 790.0
+
+[node name="UnsortedListSlot" parent="UnsortedList" instance=ExtResource("2_03071")]
+layout_mode = 2
+
+[node name="UnsortedListSlot2" parent="UnsortedList" instance=ExtResource("2_03071")]
+layout_mode = 2
+
+[node name="UnsortedListSlot3" parent="UnsortedList" instance=ExtResource("2_03071")]
+layout_mode = 2
+
+[node name="UnsortedListSlot4" parent="UnsortedList" instance=ExtResource("2_03071")]
+layout_mode = 2
+
+[node name="UnsortedList2" type="VBoxContainer" parent="."]
+offset_left = 550.0
+offset_top = 178.0
+offset_right = 900.0
+offset_bottom = 790.0
+
+[node name="UnsortedListSlot" parent="UnsortedList2" instance=ExtResource("2_03071")]
+layout_mode = 2
+
+[node name="UnsortedListSlot2" parent="UnsortedList2" instance=ExtResource("2_03071")]
+layout_mode = 2
+
+[node name="UnsortedListSlot3" parent="UnsortedList2" instance=ExtResource("2_03071")]
+layout_mode = 2
+
+[node name="UnsortedListSlot4" parent="UnsortedList2" instance=ExtResource("2_03071")]
+layout_mode = 2

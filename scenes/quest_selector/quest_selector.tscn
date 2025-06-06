@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckr72p3oeosta"]
+
+[ext_resource type="PackedScene" uid="uid://t3qih7b064a8" path="res://scenes/quest_selector/resource_buttons/resource_buttons.tscn" id="1_0jcs8"]
+[ext_resource type="Script" path="res://scenes/quest_selector/quest_selector.gd" id="1_7t42c"]
+[ext_resource type="PackedScene" uid="uid://deugveuuvmapd" path="res://scenes/quest_selector/amount_buttons/amount_buttons.tscn" id="4_nisye"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6747h"]
+bg_color = Color(0.847059, 0.8, 0.678431, 1)
+
+[node name="QuestSelector" type="Control" node_paths=PackedStringArray("action_label", "amount_label", "resource_label")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7t42c")
+action_label = NodePath("VBoxContainer/Panel/QuestText/Action")
+amount_label = NodePath("VBoxContainer/Panel/QuestText/Amount")
+resource_label = NodePath("VBoxContainer/Panel/QuestText/Resource")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 0
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(350, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6747h")
+
+[node name="QuestText" type="HBoxContainer" parent="VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -111.5
+offset_right = 111.5
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="Action" type="Label" parent="VBoxContainer/Panel/QuestText"]
+layout_mode = 2
+text = "[Action]"
+
+[node name="Amount" type="Label" parent="VBoxContainer/Panel/QuestText"]
+layout_mode = 2
+text = "[Amount]"
+
+[node name="Resource" type="Label" parent="VBoxContainer/Panel/QuestText"]
+layout_mode = 2
+text = "[Resource]"
+
+[node name="ResourceButtons" parent="VBoxContainer/Panel" instance=ExtResource("1_0jcs8")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 77.0
+offset_right = 135.0
+offset_bottom = 143.0
+theme_override_constants/separation = 10
+
+[node name="AmountButtons" parent="VBoxContainer/Panel" instance=ExtResource("4_nisye")]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 77.0
+offset_right = 332.0
+offset_bottom = 143.0
+theme_override_constants/separation = 10
+
+[node name="CreateQuestBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Create Quest"
+
+[connection signal="resource_changed" from="VBoxContainer/Panel/ResourceButtons" to="." method="_on_resource_buttons_resource_changed"]
+[connection signal="amount_changed" from="VBoxContainer/Panel/AmountButtons" to="." method="_on_amount_buttons_amount_changed"]
