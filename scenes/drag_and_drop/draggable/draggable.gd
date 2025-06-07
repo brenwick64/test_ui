@@ -3,7 +3,7 @@ extends Node
 
 @export var parent_ui: Control
 
-signal dropped()
+signal dropped
 
 var is_dragging: bool = false
 var is_draggable_hoisted: bool = false
@@ -49,7 +49,6 @@ func _check_droppable():
 		current_hovered_droppable.droppable.handle_draggable_exited(parent_ui)	
 		hovered_control.droppable.handle_draggable_entered(parent_ui)
 		current_hovered_droppable = hovered_control
-
 
 # overrides
 func handle_input(event: InputEvent) -> void:

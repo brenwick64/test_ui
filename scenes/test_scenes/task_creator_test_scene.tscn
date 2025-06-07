@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmktkg2rehb7c"]
+
+[ext_resource type="PackedScene" uid="uid://ckr72p3oeosta" path="res://scenes/task_creator/task_creator.tscn" id="1_n5mkq"]
+
+[node name="TaskCreatorTestScene" type="Node2D" groups=["MainScene"]]
+
+[node name="TaskCreator" parent="." instance=ExtResource("1_n5mkq")]

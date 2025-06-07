@@ -4,8 +4,9 @@ extends Control
 @export var amount_label: Label
 @export var resource_label: Label
 
-@onready var resource_buttons: HBoxContainer = $VBoxContainer/Panel/ResourceButtons
-@onready var amount_buttons: HBoxContainer = $VBoxContainer/Panel/AmountButtons
+@onready var resource_buttons: HBoxContainer = $MainContainer/BottomContainer/Panel/ResourceButtons
+@onready var amount_buttons: HBoxContainer = $MainContainer/BottomContainer/Panel/AmountButtons
+@onready var task_container: PanelContainer = $MainContainer/TaskContainer
 
 @onready var resource_map: Dictionary = {
 	"tree": {"name": "tree", "plural_name": "trees", "action": "chop"},
@@ -37,3 +38,6 @@ func _on_resource_buttons_resource_changed(resource: String) -> void:
 func _on_amount_buttons_amount_changed(amount: int) -> void:
 	current_amount = amount
 	_update_quest_text()
+
+func _on_create_quest_btn_pressed() -> void:
+	task_container.create_new_task(resource_map[current_resource], current_amount)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnqmvegdxpx85"
-path="res://.godot/imported/plants.png-3416f9ba714db185b44f7842dab4e462.ctex"
+uid="uid://beo1dxcfbxgo5"
+path="res://.godot/imported/bass.png-7be2fb8408e581de4aba7f726d7f796a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quest_selector/1_assets/plants.png"
-dest_files=["res://.godot/imported/plants.png-3416f9ba714db185b44f7842dab4e462.ctex"]
+source_file="res://scenes/task_creator/1_assets/bass.png"
+dest_files=["res://.godot/imported/bass.png-7be2fb8408e581de4aba7f726d7f796a.ctex"]
 
 [params]
 

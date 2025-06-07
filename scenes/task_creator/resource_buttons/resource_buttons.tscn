@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://t3qih7b064a8"]
 
-[ext_resource type="Script" path="res://scenes/quest_selector/resource_buttons/resource_buttons.gd" id="1_bw5ti"]
-[ext_resource type="Texture2D" uid="uid://bnqmvegdxpx85" path="res://scenes/quest_selector/1_assets/plants.png" id="2_kh2yq"]
-[ext_resource type="Texture2D" uid="uid://beo1dxcfbxgo5" path="res://scenes/quest_selector/1_assets/bass.png" id="3_i0yrd"]
+[ext_resource type="Script" path="res://scenes/task_creator/resource_buttons/resource_buttons.gd" id="1_bw5ti"]
+[ext_resource type="Texture2D" uid="uid://bnqmvegdxpx85" path="res://scenes/task_creator/1_assets/plants.png" id="2_kh2yq"]
+[ext_resource type="Texture2D" uid="uid://beo1dxcfbxgo5" path="res://scenes/task_creator/1_assets/bass.png" id="3_i0yrd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3j55p"]
 atlas = ExtResource("2_kh2yq")
