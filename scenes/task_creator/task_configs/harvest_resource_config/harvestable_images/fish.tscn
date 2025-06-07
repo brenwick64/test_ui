@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce866kbck1ld8"]
+
+[ext_resource type="Texture2D" uid="uid://beo1dxcfbxgo5" path="res://scenes/task_creator/1_assets/bass.png" id="1_e0h2x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onfk7"]
+atlas = ExtResource("1_e0h2x")
+
+[node name="Fish" type="TextureRect"]
+custom_minimum_size = Vector2(50, 50)
+texture = SubResource("AtlasTexture_onfk7")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://deugveuuvmapd"]
 
-[ext_resource type="Script" path="res://scenes/task_creator/amount_buttons/amount_buttons.gd" id="1_hp32f"]
+[ext_resource type="Script" path="res://scenes/task_creator/task_configs/harvest_resource_config/amount_buttons/amount_buttons.gd" id="1_hp32f"]
 
 [node name="AmountButtons" type="HBoxContainer"]
 offset_left = 245.0

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RHarvestable" load_steps=3 format=3 uid="uid://dl6ug3oq07ly1"]
+
+[ext_resource type="PackedScene" uid="uid://ce866kbck1ld8" path="res://scenes/task_creator/task_configs/harvest_resource_config/harvestable_images/fish.tscn" id="1_bgb0l"]
+[ext_resource type="Script" path="res://scripts/resource_definitions/harvestable.gd" id="1_ohs2f"]
+
+[resource]
+script = ExtResource("1_ohs2f")
+name = "fish"
+plural_name = "fish"
+action = "catch"
+image_scene = ExtResource("1_bgb0l")

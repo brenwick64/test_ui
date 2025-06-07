@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RHarvestable" load_steps=3 format=3 uid="uid://custimsoafyq0"]
+
+[ext_resource type="PackedScene" uid="uid://cwvgupqefehub" path="res://scenes/task_creator/task_configs/harvest_resource_config/harvestable_images/rock.tscn" id="1_asgu4"]
+[ext_resource type="Script" path="res://scripts/resource_definitions/harvestable.gd" id="1_rvfsf"]
+
+[resource]
+script = ExtResource("1_rvfsf")
+name = "rock"
+plural_name = "rocks"
+action = "mine"
+image_scene = ExtResource("1_asgu4")

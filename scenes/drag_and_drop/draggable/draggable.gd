@@ -57,7 +57,8 @@ func handle_input(event: InputEvent) -> void:
 	if is_left_click and event.is_action_released:
 		if current_hovered_droppable:
 			current_hovered_droppable.droppable.handle_draggable_dropped(parent_ui)
-		dropped.emit(parent_ui)
+		dropped.emit()
+		parent_ui.queue_free()
 
 func handle_gui_input(event: InputEvent) -> void:
 	var is_left_click: bool = event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT

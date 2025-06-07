@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RHarvestable" load_steps=3 format=3 uid="uid://dim2nxbhyaxxs"]
+
+[ext_resource type="Script" path="res://scripts/resource_definitions/harvestable.gd" id="1_s23h1"]
+[ext_resource type="PackedScene" uid="uid://crswmjwmqa0k5" path="res://scenes/task_creator/task_configs/harvest_resource_config/harvestable_images/tree.tscn" id="1_x8hga"]
+
+[resource]
+script = ExtResource("1_s23h1")
+name = "tree"
+plural_name = "trees"
+action = "chop"
+image_scene = ExtResource("1_x8hga")

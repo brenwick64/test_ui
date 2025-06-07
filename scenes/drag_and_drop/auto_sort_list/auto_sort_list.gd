@@ -38,7 +38,8 @@ func _on_dropped(droppable, draggable) -> void:
 	var open_slot: PanelContainer = _get_next_droppable_node()
 	if not open_slot: return
 	var draggable_cpy: Control = draggable.duplicate()
-	draggable_cpy.dropped.connect(_on_draggable_dropped)
+	var draggable_node: Draggable = draggable_cpy.get_node_or_null("Draggable")
+	draggable_node.dropped.connect(_on_draggable_dropped)
 	open_slot.add_child(draggable_cpy)
 
 func _on_draggable_dropped():

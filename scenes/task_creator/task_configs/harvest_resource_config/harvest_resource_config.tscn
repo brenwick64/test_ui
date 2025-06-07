@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4idy01r30m5a"]
+
+[ext_resource type="PackedScene" uid="uid://t3qih7b064a8" path="res://scenes/task_creator/task_configs/harvest_resource_config/harvestable_buttons/harvestable_buttons.tscn" id="1_3qn3c"]
+[ext_resource type="Script" path="res://scenes/task_creator/task_configs/harvest_resource_config/harvest_resource_config.gd" id="1_76jkv"]
+[ext_resource type="Resource" uid="uid://dim2nxbhyaxxs" path="res://resources/harvestables/tree.tres" id="2_on3jk"]
+[ext_resource type="PackedScene" uid="uid://deugveuuvmapd" path="res://scenes/task_creator/task_configs/harvest_resource_config/amount_buttons/amount_buttons.tscn" id="2_xh5ut"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6747h"]
+bg_color = Color(0.847059, 0.8, 0.678431, 1)
+
+[node name="HarvestResourceConfig" type="Panel"]
+custom_minimum_size = Vector2(350, 150)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6747h")
+script = ExtResource("1_76jkv")
+default_harvestable = ExtResource("2_on3jk")
+default_amount = 1
+
+[node name="TaskText" type="Label" parent="."]
+layout_mode = 2
+offset_left = 45.0
+offset_top = 22.0
+offset_right = 295.0
+offset_bottom = 45.0
+text = "%action %amount %harvestable"
+
+[node name="HarvestableButtons" parent="." instance=ExtResource("1_3qn3c")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 77.0
+offset_right = 135.0
+offset_bottom = 143.0
+theme_override_constants/separation = 10
+
+[node name="AmountButtons" parent="." instance=ExtResource("2_xh5ut")]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 77.0
+offset_right = 332.0
+offset_bottom = 143.0
+theme_override_constants/separation = 10
+
+[connection signal="harvestable_changed" from="HarvestableButtons" to="." method="_on_harvestable_buttons_harvestable_changed"]
+[connection signal="amount_changed" from="AmountButtons" to="." method="_on_amount_buttons_amount_changed"]

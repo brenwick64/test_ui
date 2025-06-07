@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwvgupqefehub"]
+
+[ext_resource type="Texture2D" uid="uid://bnqmvegdxpx85" path="res://scenes/task_creator/1_assets/plants.png" id="1_otlpn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ownvq"]
+atlas = ExtResource("1_otlpn")
+region = Rect2(128, 18, 15, 12)
+
+[node name="Rock" type="TextureRect"]
+custom_minimum_size = Vector2(50, 50)
+texture = SubResource("AtlasTexture_ownvq")

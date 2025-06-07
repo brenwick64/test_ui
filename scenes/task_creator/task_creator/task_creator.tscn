@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckr72p3oeosta"]
+
+[ext_resource type="Script" path="res://scenes/task_creator/task_creator/task_creator.gd" id="1_t45cq"]
+[ext_resource type="Script" path="res://scenes/task_creator/task_container.gd" id="2_vp6l6"]
+[ext_resource type="PackedScene" uid="uid://b4idy01r30m5a" path="res://scenes/task_creator/task_configs/harvest_resource_config/harvest_resource_config.tscn" id="3_rkglv"]
+
+[node name="TaskCreator" type="VBoxContainer"]
+offset_right = 350.0
+offset_bottom = 335.0
+script = ExtResource("1_t45cq")
+
+[node name="TaskPanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(350, 150)
+layout_mode = 2
+script = ExtResource("2_vp6l6")
+
+[node name="TaskConfig" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HarvestResourceConfig" parent="TaskConfig" instance=ExtResource("3_rkglv")]
+layout_mode = 2
+
+[node name="CreateTaskBtn" type="Button" parent="TaskConfig"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Create Task"
+
+[connection signal="pressed" from="TaskConfig/CreateTaskBtn" to="." method="_on_create_task_btn_pressed"]

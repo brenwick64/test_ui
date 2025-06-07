@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://crswmjwmqa0k5"]
+
+[ext_resource type="Texture2D" uid="uid://bnqmvegdxpx85" path="res://scenes/task_creator/1_assets/plants.png" id="1_ore05"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3j55p"]
+atlas = ExtResource("1_ore05")
+region = Rect2(20, 1, 24, 30)
+
+[node name="Tree" type="TextureRect"]
+custom_minimum_size = Vector2(50, 50)
+texture = SubResource("AtlasTexture_3j55p")
