@@ -15,13 +15,13 @@ script = ExtResource("1_76jkv")
 default_harvestable = ExtResource("2_on3jk")
 default_amount = 1
 
-[node name="TaskText" type="Label" parent="."]
-layout_mode = 2
-offset_left = 45.0
-offset_top = 22.0
-offset_right = 295.0
-offset_bottom = 45.0
-text = "%action %amount %harvestable"
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 15.0
+offset_right = 245.0
+offset_bottom = 38.0
+text = "Harvest Resource"
 
 [node name="HarvestableButtons" parent="." instance=ExtResource("1_3qn3c")]
 layout_mode = 0

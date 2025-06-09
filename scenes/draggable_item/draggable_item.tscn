@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cyysoa1ytxc1t"]
 
-[ext_resource type="Script" path="res://scenes/drag_and_drop/draggable_item/draggable_item.gd" id="1_vxbm3"]
+[ext_resource type="Script" path="res://scenes/draggable_item/draggable_item.gd" id="1_gllj4"]
 [ext_resource type="PackedScene" uid="uid://blh61klxjjp41" path="res://scenes/drag_and_drop/draggable/draggable.tscn" id="2_udapr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4d3do"]
@@ -10,7 +10,8 @@ custom_minimum_size = Vector2(150, 50)
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4d3do")
-script = ExtResource("1_vxbm3")
+script = ExtResource("1_gllj4")
+item_name = "Item"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

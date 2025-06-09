@@ -12,6 +12,12 @@ func _ready() -> void:
 	droppable.draggable_dropped.connect(_on_draggable_dropped)
 
 # methods
+func get_element() -> Control:
+	for child: Node in get_children():
+		if child is not Droppable:
+			return child
+	return null
+
 func focus() -> void:
 	var original_stylebox: StyleBoxFlat = get_theme_stylebox("panel")
 	var stylebox = original_stylebox.duplicate() as StyleBoxFlat

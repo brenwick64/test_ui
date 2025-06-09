@@ -2,17 +2,30 @@ extends Panel
 
 @onready var label: Label = $Label
 @onready var draggable: Draggable = $Draggable
+@onready var panel_container: PanelContainer = $PanelContainer
 
 @export var harvestable: RHarvestable
 @export var amount: int
 
-func _ready() -> void:
-	label.text = label.text.replace("%action", harvestable.action)
+func _update_text() -> void:
+	var text: String = label.text
+	text = text.replace("%action", harvestable.action)
+	text = text.replace("%amount", str(amount))
 	if amount == 1:
-		label.text = label.text.replace("%harvestable", harvestable.name)
+		text = text.replace("%harvestable", harvestable.name)
 	else:
-		label.text = label.text.replace("%harvestable", harvestable.plural_name)
-	label.text = label.text.replace("%amount", str(amount))
+		text = text.replace("%harvestable", harvestable.plural_name)
+	label.text = text
+
+func _add_harvestable_image() -> void:
+	for child: Node in panel_container.get_children():
+		child.queue_free()
+	var img: TextureRect = harvestable.image_scene.instantiate()
+	panel_container.add_child(img)
+
+func _ready() -> void:
+	_update_text()
+	_add_harvestable_image()
 
 # overrides for draggable
 func _process(delta: float) -> void:

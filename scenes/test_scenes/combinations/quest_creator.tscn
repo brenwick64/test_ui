@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dx6ntolk4x4k1"]
+
+[ext_resource type="PackedScene" uid="uid://ckr72p3oeosta" path="res://scenes/task_creator/task_creator/task_creator.tscn" id="1_stu63"]
+[ext_resource type="PackedScene" uid="uid://bc8b1oqn55se0" path="res://scenes/drag_and_drop/auto_sort_list/auto_sort_list.tscn" id="2_7n5n2"]
+[ext_resource type="Script" path="res://scenes/test_scenes/combinations/quest_creator.gd" id="2_gydr8"]
+[ext_resource type="PackedScene" uid="uid://64d5xexgxju1" path="res://scenes/drag_and_drop/auto_sort_slot/auto_sort_slot.tscn" id="3_81iy7"]
+
+[node name="QuestCreator" type="Node2D" groups=["MainScene"]]
+
+[node name="TaskCreator" parent="." instance=ExtResource("1_stu63")]
+
+[node name="QuestCreator" type="VBoxContainer" parent="."]
+offset_left = 354.0
+offset_right = 704.0
+offset_bottom = 493.0
+script = ExtResource("2_gydr8")
+
+[node name="AutoSortList" parent="QuestCreator" instance=ExtResource("2_7n5n2")]
+layout_mode = 2
+
+[node name="AutoSortSlot" parent="QuestCreator/AutoSortList" instance=ExtResource("3_81iy7")]
+layout_mode = 2
+
+[node name="AutoSortSlot2" parent="QuestCreator/AutoSortList" instance=ExtResource("3_81iy7")]
+layout_mode = 2
+
+[node name="AutoSortSlot3" parent="QuestCreator/AutoSortList" instance=ExtResource("3_81iy7")]
+layout_mode = 2
+
+[node name="CreateQuestBtn" type="Button" parent="QuestCreator"]
+layout_mode = 2
+text = "Create Quest"
+
+[connection signal="list_updated" from="QuestCreator/AutoSortList" to="QuestCreator" method="_on_auto_sort_list_list_updated"]
+[connection signal="pressed" from="QuestCreator/CreateQuestBtn" to="QuestCreator" method="_on_create_quest_btn_pressed"]
